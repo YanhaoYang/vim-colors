@@ -105,16 +105,22 @@ hi Error         cterm=bold ctermfg=7 ctermbg=1
 "vim: sw=4
 
 
-  hi Ignore	gui=NONE
+hi Ignore	gui=NONE
 
-  " the gui=undercurl could only support in Vim 7
-  if has('spell')
-    hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-    hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-    hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-    hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-  endif
-  hi TabLine		gui=underline
-  hi TabLineFill	gui=underline
-  hi Underlined	gui=underline
-  hi CursorLine	gui=underline
+" the gui=undercurl could only support in Vim 7
+if has('spell')
+  hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+  hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+  hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+  hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+endif
+
+hi TabLine		gui=underline
+hi TabLineFill	gui=underline
+hi Underlined	gui=underline
+hi CursorLine	gui=underline
+
+hi Pmenu		ctermfg=White	ctermbg=Black
+hi PmenuSel	ctermfg=Magenta	ctermbg=Black	cterm=NONE
+hi PmenuSbar	ctermfg=99	ctermbg=18	cterm=NONE
+hi PmenuThumb	ctermfg=99	ctermbg=28	cterm=NONE
